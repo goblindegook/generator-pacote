@@ -1,0 +1,29 @@
+{
+  "name": "<%= name %>",
+  "version": "0.0.0",
+  "description": "<%= description %>",
+  "repository": "<%= githubUser %>/<%= name %>",
+  "scripts": {
+    "build": "cd src; babel *.js -d ../lib",
+    "docs": "esdoc -c esdoc.json",
+    "prepublish": "npm run build",
+    "pretest": "eslint src/**/*.js",
+    "test": "ava --require babel-core/register"
+  },
+  "author": {
+    "name": "<%= authorName %>",
+    "email": "<%= authorEmail %>",
+    "url": "<%= authorUrl %>"
+  },
+  "license": "MIT",
+  "main": "lib/index.js",
+  "devDependencies": {
+    "ava": "^0.11.0",
+    "babel": "^6.3.26",
+    "babel-cli": "^6.4.5",
+    "babel-core": "^6.4.5",
+    "babel-preset-es2015": "^6.3.13",
+    "esdoc": "^0.4.3",
+    "eslint": "^1.10.3"
+  }
+}
