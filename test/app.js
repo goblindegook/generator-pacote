@@ -10,9 +10,9 @@ describe('generator-pacote:app', function () {
       .withPrompts({name: 'rainbow-maker'})
       .withPrompts({description: 'Rainbow maker.'})
       .withPrompts({authorName: 'unicorn'})
-      .withPrompts({authorEmail: 'unicorn@rainbo.ws'})
+      .withPrompts({email: 'unicorn@rainbo.ws'})
       .withPrompts({authorUrl: 'http://rainbo.ws'})
-      .withPrompts({githubUser: 'unicorn'})
+      .withPrompts({githubUsername: 'unicorn'})
       .on('end', done);
   });
 

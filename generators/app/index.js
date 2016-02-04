@@ -27,28 +27,32 @@ module.exports = yeoman.generators.Base.extend({
       {
         type: 'input',
         name: 'name',
-        message: 'Your module name',
-        default: _.kebabCase(this.appname)
+        message: 'What do you want to call your module?',
+        default: _.kebabCase(this.appname),
+        filter: function (name) {
+          return _.kebabCase(name);
+        }
       }, {
         type: 'input',
         name: 'description',
-        message: 'Your module\'s description'
+        message: 'How would you describe your module in a few words?'
       }, {
         type: 'input',
         name: 'authorName',
-        message: 'Your name'
+        message: 'What is your name?'
       }, {
         type: 'input',
-        name: 'authorEmail',
-        message: 'Your email'
+        name: 'email',
+        message: 'What is your email?'
       }, {
         type: 'input',
         name: 'authorUrl',
-        message: 'Your website URL'
+        message: 'What is your website\'s URL?'
       }, {
         type: 'input',
-        name: 'githubUser',
-        message: 'Your Github username'
+        name: 'githubUsername',
+        store: true,
+        message: 'What is your Github username?'
       }
     ];
 

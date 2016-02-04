@@ -2,7 +2,7 @@
   "name": "<%= name %>",
   "version": "0.0.0",
   "description": "<%= description %>",
-  "repository": "<%= githubUser %>/<%= name %>",
+  "repository": "<%= githubUsername %>/<%= name %>",
   "scripts": {
     "build": "cd src; babel *.js -d ../lib",
     "docs": "esdoc -c esdoc.json",
@@ -12,7 +12,7 @@
   },
   "author": {
     "name": "<%= authorName %>",
-    "email": "<%= authorEmail %>",
+    "email": "<%= email %>",
     "url": "<%= authorUrl %>"
   },
   "license": "MIT",

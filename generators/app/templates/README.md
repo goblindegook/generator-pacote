@@ -1,4 +1,4 @@
-# <%= name %> [![Build Status](https://travis-ci.org/<%= githubUser %>/<%= name %>.svg?branch=master)](https://travis-ci.org/<%= githubUser %>/<%= name %>)
+# <%= name %> [![Build Status](https://travis-ci.org/<%= githubUsername %>/<%= name %>.svg?branch=master)](https://travis-ci.org/<%= githubUsername %>/<%= name %>)
 
 <%= description %>
 
