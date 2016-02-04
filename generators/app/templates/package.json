@@ -8,7 +8,13 @@
     "docs": "esdoc -c esdoc.json",
     "prepublish": "npm run build",
     "pretest": "eslint src/**/*.js",
-    "test": "ava --require babel-core/register"
+    "test": "nyc ava",
+    "coveralls": "nyc report --reporter=text-lcov | coveralls"
+  },
+  "ava": {
+    "require": [
+      "babel-core/register"
+    ]
   },
   "author": {
     "name": "<%= authorName %>",
@@ -23,7 +29,9 @@
     "babel-cli": "^6.4.5",
     "babel-core": "^6.4.5",
     "babel-preset-es2015": "^6.3.13",
+    "coveralls": "^2.11.6",
     "esdoc": "^0.4.3",
-    "eslint": "^1.10.3"
+    "eslint": "^1.10.3",
+    "nyc": "^5.5.0"
   }
 }
