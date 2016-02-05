@@ -1,6 +1,6 @@
 {
   "name": "generator-pacote",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Generates NPM modules with Babel and AVA tests.",
   "homepage": "https://github.com/goblindegook/generator-pacote",
   "author": {
