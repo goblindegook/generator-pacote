@@ -9,5 +9,5 @@ All notable changes to this project will be documented in this file. This projec
 ## 0.1.0 – February 1, 2016
 - Initial release.
 
-[unreleased]: https://github.com/goblindegook/generator-pacote/compare/0.2.0...HEAD
-[0.2.0]: https://github.com/goblindegook/generator-pacote/compare/0.1.0...0.2.0
+[unreleased]: https://github.com/goblindegook/generator-pacote/compare/v0.2.0...HEAD
+[0.2.0]: https://github.com/goblindegook/generator-pacote/compare/v0.1.0...v0.2.0
