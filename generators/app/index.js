@@ -1,16 +1,17 @@
 'use strict';
 var yeoman = require('yeoman-generator');
-var _ = require('lodash');
+var assign = require('lodash/assign');
+var camelCase = require('lodash/camelCase');
+var kebabCase = require('lodash/kebabCase');
 var chalk = require('chalk');
 var yosay = require('yosay');
 
-module.exports = yeoman.generators.Base.extend({
-
+module.exports = yeoman.Base.extend({
   /**
    * Constructor.
    */
   constructor: function () {
-    yeoman.generators.Base.apply(this, arguments);
+    yeoman.Base.apply(this, arguments);
   },
 
   /**
@@ -28,9 +29,9 @@ module.exports = yeoman.generators.Base.extend({
         type: 'input',
         name: 'name',
         message: 'What do you want to call your module?',
-        default: _.kebabCase(this.appname),
+        default: kebabCase(this.appname),
         filter: function (name) {
-          return _.kebabCase(name);
+          return kebabCase(name);
         }
       }, {
         type: 'input',
@@ -56,18 +57,19 @@ module.exports = yeoman.generators.Base.extend({
       }
     ];
 
-    this.prompt(prompts, function (props) {
-      this.props = props;
-      done();
-    }.bind(this));
+    return this.prompt(prompts)
+      .then(function (props) {
+        this.props = props;
+        done();
+      }.bind(this));
   },
 
   /**
    * Writing files.
    */
   writing: function () {
-    var props = _.extend(Object.create(this.props), {
-      camelCaseName: _.camelCase(this.props.name)
+    var props = assign(Object.create(this.props), {
+      camelCaseName: camelCase(this.props.name)
     });
 
     var dest = {

@@ -2,11 +2,11 @@
 
 var path = require('path');
 var assert = require('yeoman-assert');
-var helpers = require('yeoman-generator').test;
+var test = require('yeoman-test');
 
 describe('generator-pacote:app', function () {
   before(function (done) {
-    helpers.run(path.join(__dirname, '../generators/app'))
+    test.run(path.join(__dirname, '../generators/app'))
       .withPrompts({name: 'rainbow-maker'})
       .withPrompts({description: 'Rainbow maker.'})
       .withPrompts({authorName: 'unicorn'})
