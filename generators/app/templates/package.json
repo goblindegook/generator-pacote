@@ -23,6 +23,7 @@
   },
   "license": "MIT",
   "main": "lib/index.js",
+  "jsnext:main": "src/index.js",
   "devDependencies": {
     "ava": "^0.15.2",
     "babel": "^6.3.26",
