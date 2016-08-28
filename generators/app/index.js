@@ -75,7 +75,6 @@ module.exports = yeoman.Base.extend({
     var dest = {
       '_babelrc': '.babelrc',
       '_editorconfig': '.editorconfig',
-      '_eslintrc': '.eslintrc',
       '_gitignore': '.gitignore',
       '_npmignore': '.npmignore',
       '_travis.yml': '.travis.yml',

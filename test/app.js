@@ -20,7 +20,6 @@ describe('generator-pacote:app', function () {
     assert.file([
       '.babelrc',
       '.editorconfig',
-      '.eslintrc',
       '.gitignore',
       '.npmignore',
       '.travis.yml',
@@ -33,4 +32,3 @@ describe('generator-pacote:app', function () {
     ]);
   });
 });
-

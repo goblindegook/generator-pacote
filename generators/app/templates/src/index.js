@@ -1,7 +1,7 @@
 /**
  * <%= name %>
  */
-function <%= camelCaseName %>() {
+function <%= camelCaseName %> () {
   return true
 }
 

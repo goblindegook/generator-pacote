@@ -7,7 +7,7 @@
     "build": "cd src; babel *.js -d ../lib",
     "docs": "esdoc -c esdoc.json",
     "prepublish": "npm run build",
-    "pretest": "eslint src/**/*.js",
+    "pretest": "standard",
     "test": "nyc ava",
     "coveralls": "nyc report --reporter=text-lcov | coveralls"
   },
@@ -25,7 +25,7 @@
   "main": "lib/index.js",
   "jsnext:main": "src/index.js",
   "devDependencies": {
-    "ava": "^0.15.2",
+    "ava": "^0.16.0",
     "babel": "^6.3.26",
     "babel-cli": "^6.4.5",
     "babel-core": "^6.4.5",
@@ -33,7 +33,7 @@
     "babel-preset-es2016": "^6.11.3",
     "coveralls": "^2.11.6",
     "esdoc": "^0.4.3",
-    "eslint": "^3.1.1",
-    "nyc": "^7.1.0-candidate3"
+    "nyc": "^8.1.0",
+    "standard": "^8.0.0"
   }
 }
