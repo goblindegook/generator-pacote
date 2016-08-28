@@ -12,9 +12,8 @@
     "coveralls": "nyc report --reporter=text-lcov | coveralls"
   },
   "ava": {
-    "require": [
-      "babel-core/register"
-    ]
+    "babel": "inherit",
+    "require": "babel-register"
   },
   "author": {
     "name": "<%= authorName %>",
@@ -26,12 +25,12 @@
   "jsnext:main": "src/index.js",
   "devDependencies": {
     "ava": "^0.16.0",
-    "babel": "^6.3.26",
-    "babel-cli": "^6.4.5",
-    "babel-core": "^6.4.5",
+    "babel-cli": "^6.14.0",
+    "babel-core": "^6.14.0",
     "babel-preset-latest": "^6.14.0",
-    "coveralls": "^2.11.6",
-    "esdoc": "^0.4.3",
+    "babel-register": "^6.14.0",
+    "coveralls": "^2.11.12",
+    "esdoc": "^0.4.8",
     "nyc": "^8.1.0",
     "standard": "^8.0.0"
   }
